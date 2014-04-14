@@ -1,0 +1,13 @@
+<section><h3 id="req.params">req.params</h3><p>This property is an object containing properties mapped to the named route "parameters".
+For example if you have the route <code>/user/:name</code>, then the "name" property
+is available to you as <code>req.params.name</code>. This object defaults to <code>{}</code>.
+</p><pre class="js"><code>// GET /user/tj
+req.params.name
+// =&gt; "tj"
+</code></pre><p>When a regular expression is used for the route definition, capture groups
+are provided in the array using <code>req.params[N]</code>, where <code>N</code>
+is the nth capture group. This rule is applied to unnamed wild-card matches
+with string routes such as `/file/*`:
+</p><pre class="js"><code>// GET /file/javascripts/jquery.js
+req.params[0]
+// =&gt; "javascripts/jquery.js"</code></pre></section>

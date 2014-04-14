@@ -1,0 +1,15 @@
+<section><h3 id="req.query">req.query</h3><p>This property is an object containing the parsed query-string,
+defaulting to <code>{}</code>.
+</p><pre class="js"><code>// GET /search?q=tobi+ferret
+req.query.q
+// =&gt; "tobi ferret"
+
+// GET /shoes?order=desc&amp;shoe;[color]=blue&amp;shoe;[type]=converse
+req.query.order
+// =&gt; "desc"
+
+req.query.shoe.color
+// =&gt; "blue"
+
+req.query.shoe.type
+// =&gt; "converse"</code></pre></section>

@@ -1,0 +1,18 @@
+<section><h3 id="res.sendfile">res.sendfile(path, [options], [fn]])</h3><p>Transfer the file at the given <code>path</code>.</p><p>Automatically defaults the Content-Type response header field based
+on the filename's extension. The callback <code>fn(err)</code> is
+invoked when the transfer is complete or when an error occurs.
+</p><p>Options:</p><ul><li><code>maxAge</code> in milliseconds defaulting to 0</li><li><code>root</code> root directory for relative filenames</li></ul><p>This method provides fine-grained support for file serving
+as illustrated in the following example:
+</p><pre class="js"><code>app.get('/user/:uid/photos/:file', function(req, res){
+  var uid = req.params.uid
+    , file = req.params.file;
+    
+  req.user.mayViewFilesFrom(uid, function(yes){
+    if (yes) {
+      res.sendfile('/uploads/' + uid + '/' + file);
+    } else {
+      res.send(403, 'Sorry! you cant see that.');
+    }
+  });
+});
+</code></pre><p>Please refer to <a href="https://github.com/visionmedia/send">send</a> for additional documentation or any issues and concerns.</p></section>

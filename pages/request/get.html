@@ -1,0 +1,11 @@
+<section><h3 id="req.get">req.get(field)</h3><p> 
+Get the case-insensitive request header <code>field</code>. 
+The <em>Referrer</em> and <em>Referer</em> fields are interchangeable.</p><pre class="js"><code>req.get('Content-Type');
+// =&gt; "text/plain"
+
+req.get('content-type');
+// =&gt; "text/plain"
+
+req.get('Something');
+// =&gt; undefined
+</code></pre><p>Aliased as <code>req.header(field)</code>.</p></section>

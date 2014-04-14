@@ -1,0 +1,10 @@
+<section><h3 id="res.set">res.set(field, [value])</h3><p> 
+Set header <code>field</code> to <code>value</code>,
+or pass an object to set multiple fields at once.</p><pre class="js"><code>res.set('Content-Type', 'text/plain');
+
+res.set({
+  'Content-Type': 'text/plain',
+  'Content-Length': '123',
+  'ETag': '12345'
+})
+</code></pre><p>Aliased as <code>res.header(field, [value])</code>.</p></section>

@@ -1,0 +1,16 @@
+<section><h3 id="app.locals">app.locals</h3><p>Application local variables are provided to all templates
+rendered within the application. This is useful for providing
+helper functions to templates, as well as app-level data.
+</p><pre class="js"><code>app.locals.title = 'My App';
+app.locals.strftime = require('strftime');
+app.locals.email = 'me@myapp.com';
+</code></pre><p>The <code>app.locals</code> object is a JavaScript <code>Object</code>. The
+properties added to it will be exposed as local variables within the application.
+</p><pre class="js"><code>app.locals.title
+// =&gt; 'My App'
+
+app.locals.email
+// =&gt; 'me@myapp.com'
+</code></pre><p>By default Express exposes only a single app-level local variable, <code>settings</code>.
+</p><pre class="js"><code>app.set('title', 'My App');
+// use settings.title in a view</code></pre></section>

@@ -1,0 +1,15 @@
+<section><h3 id="req.param">req.param(name)</h3><p>Return the value of param <code>name</code> when present.
+</p><pre class="js"><code>// ?name=tobi
+req.param('name')
+// =&gt; "tobi"
+
+// POST name=tobi
+req.param('name')
+// =&gt; "tobi"
+
+// /user/tobi for /user/:name 
+req.param('name')
+// =&gt; "tobi"
+</code></pre><p>Lookup is performed in the following order:</p><ul><li><code>req.params</code></li><li><code>req.body</code></li><li><code>req.query</code></li></ul><p>Direct access to <code>req.body</code>, <code>req.params</code>,
+and <code>req.query</code> should be favoured for clarity - unless
+you truly accept input from each object.</p></section>

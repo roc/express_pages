@@ -1,0 +1,8 @@
+<section><h3 id="res.links">res.links(links)</h3><p>Join the given <code>links</code> to populate the "Link"
+response header field.
+</p><pre class="js"><code>res.links({
+  next: 'http://api.example.com/users?page=2',
+  last: 'http://api.example.com/users?page=5'
+});
+</code></pre><p>yields:</p><pre><code>Link: &lt;http://api.example.com/users?page=2&gt;; rel="next", 
+      &lt;http://api.example.com/users?page=5&gt;; rel="last"</code></pre></section>
